@@ -18,3 +18,8 @@ struct monster MONSTER[MONSTER_MAX] ={
 struct  weapon WEAPON[WEAPON_MAX] = {
 	{DRAGON_LANCE,EQUIPPED},
 };
+
+
+struct player PLAYER[PLAYER_MAX]= {
+		{},
+};

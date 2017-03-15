@@ -5,9 +5,9 @@
  *      Author: kjtbw
  */
 
+
 #ifndef MANDAMU_H_
 #define MANDAMU_H_
-
 
 
 #include <stdio.h>
@@ -17,6 +17,7 @@
 #define STR_MAX 256
 #define MONSTER_MAX 13
 #define WEAPON_MAX 6
+#define PLAYER_MAX 4
 
 #define DRAGON 11
 
@@ -44,12 +45,17 @@ struct weapon{
 	int place;
 	};
 
+struct player{
+	int score;
+	};
+
 
 extern struct monster MONSTER[MONSTER_MAX];
 extern struct  weapon WEAPON[WEAPON_MAX] ;
-
+extern struct player PLAYER[PLAYER_MAX];
 
 void initialize();
 int print_error(int n);
+
 
 #endif /* MANDAMU_H_ */
