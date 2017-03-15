@@ -32,7 +32,9 @@ int main(void){
 
 	printf("%d\n",MONSTER[0].atk);
 	printf("%d\n",WEAPON[0].name);
-
+	memset(buf,0,STR_MAX);
+	get_str(buf, MONSTER[7].name);
+	printf("%s\n",buf);
 }
 
 
