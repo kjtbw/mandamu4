@@ -12,7 +12,6 @@ switch(type){
 case DRAGON:
 	snprintf(buf, STR_MAX, "dragon");
 	break;
-
 case DEMON:
 	snprintf(buf, STR_MAX, "demon");
 	break;

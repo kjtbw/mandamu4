@@ -17,7 +17,7 @@ int main(void){
 
 	initialize();
 
-	printf("Let's start dungeon of mandamu!\n");
+	printf("Let's start dungeon of mandamu!\n\n");
 
 	do{
  		printf("how many players are there?(2,3,4) \n");
@@ -30,11 +30,10 @@ int main(void){
 	}while(checker < 1);
 	PLAYER_NUMBER=atoi(buf);
 
-	printf("%d\n",MONSTER[0].atk);
-	printf("%d\n",WEAPON[0].name);
 	memset(buf,0,STR_MAX);
-	get_str(buf, MONSTER[7].name);
+	get_str(buf,MONSTER[6].weak_weapon[0]);
 	printf("%s\n",buf);
+
 }
 
 
@@ -51,7 +50,7 @@ void initialize(){
 int print_error(int n){
 	switch(n){
 		case PNII:
-			printf("player numer is invalid. please input again.\n");
+			printf("player number is invalid. please input again.\n");
 			break;
 
 		default: ;

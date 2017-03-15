@@ -44,7 +44,7 @@
 #define DUNGEON 31
 #define HAND 32
 #define EXCLUDE 33
-#define EMPTY 34
+#define EMPTY 0
 
 
 
@@ -58,7 +58,7 @@ extern int PLAYER_NUMBER;
  struct monster{
 	int name;
 	int atk;
-	int weak_weapon;
+	int weak_weapon[3];
 	int place;
 	};
 
