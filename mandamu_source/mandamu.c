@@ -5,45 +5,35 @@
  *      Author: kjtbw
  */
 
-
-
 #include "mandamu.h"
-
 int PLAYER_NUMBER=0;
+int ORDER[13]={};
+int COUNT=0;
+int END_FLAG=0;
+int NOW_PLAYER;
+
+
 
 int main(void){
-	char buf[STR_MAX];
-	int checker=0;
-
 	initialize();
 
-	printf("Let's start dungeon of mandamu!\n\n");
+	while(!END_FLAG){
+		/*eclipse実行だときれいにならない,コマンドプロンプトがよい*/
+		system("cls");
+		NOW_PLAYER=COUNT%4 +1;
+		print_turn_init();
 
-	do{
- 		printf("how many players are there?(2,3,4) \n");
- 		/*eclipseには必要，コマンドプロンプトなら不要*/
- 		/* printf後の標準入力には，fflushでバッファをからにする必要あり*/
- 		fflush(0);
- 		fgets(buf, sizeof(buf)/sizeof(char),stdin);
- 		if(atoi(buf) < 2 || 4 < atoi(buf))checker = print_error(PNII);
- 		else checker =1;
-	}while(checker < 1);
-	PLAYER_NUMBER=atoi(buf);
 
-	memset(buf,0,STR_MAX);
-	get_str(buf,MONSTER[6].weak_weapon[0]);
-	printf("%s\n",buf);
+
+		/*for debug*/
+		COUNT++;
+		if(COUNT > 7)END_FLAG=1;
+
+	}
 
 }
 
 
-
-
-
-void initialize(){
-	PLAYER_NUMBER=0;
-
-}
 
 
 
